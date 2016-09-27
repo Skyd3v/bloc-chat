@@ -9,24 +9,15 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				views: {
-					'': {
-						templateUrl: '/templates/home.html',
-						controller: 'HomeCtrl as home'
-					},
-					'modal@home': {
-						templateUrl: '/templates/modal.html',
-						controller: 'ModalCtrl as modal'
-					}
-				}
-			});
+				templateUrl: '/templates/home.html',
+				controller: 'HomeCtrl as home'});
+
 
 			/*.state('modal', {
 				url: '/modal',
 				controller: 'ModalCtrl as modal',
 				templateUrl: '/templates/modal.html'
 			});*/
-
 	}
 
 
