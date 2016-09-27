@@ -1,15 +1,9 @@
-(function() {
-    function HomeCtrl(Room) {
-        var ctrl = this;
-        ctrl.heroTitle = "Welcome to Bloc Chat!!";
-        ctrl.rooms = Room.all
-        
-        ctrl.setRoom = function(room) {
-            ctrl.currentRoom = room;
-        }
-    }
- 
-     angular
-         .module('blocChat')
-         .controller('HomeCtrl', ['Room', HomeCtrl]);
- })();
+(function(){
+	function HomeCtrl($scope, Room){
+		$scope.chatRooms = Room.all;
+	}
+
+	angular
+		.module("blocChat")
+		.controller("HomeCtrl", ["$scope", "Room", HomeCtrl]);
+})();

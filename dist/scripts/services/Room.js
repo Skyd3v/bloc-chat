@@ -1,16 +1,17 @@
-(function() {
-  function Room($firebaseArray) {
-    var Room = {};
-      
-    var roomRef = new Firebase("bloc-chat-3f0c2.firebaseio.com/rooms");
-    var rooms = $firebaseArray(roomRef);
+(function(){
+	function Room($firebaseArray){
+		var ref = firebase.database().ref().child("rooms");
+		var rooms = $firebaseArray(ref);
 
-    Room.all = rooms;
-      
-    return Room;
-  }
-    
-  angular
-    .module('blocChat')
-    .factory('Room', ['$firebaseArray', Room]);
+		return {
+			all: rooms, //array of all room objects
+			create: function(room){ //Function to add new room
+				rooms.$add({name: room});
+			}
+		};
+	}
+
+	angular
+		.module("blocChat")
+		.factory("Room", ["$firebaseArray", Room]);
 })();

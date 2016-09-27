@@ -1,10 +1,10 @@
-(function () {
-	function config($stateProvider, $locationProvider) {
+(function(){
+	function config($stateProvider, $locationProvider){
 		$locationProvider
 			.html5Mode({
 				enabled: true,
 				requireBase: false
-		});
+			});
 
 		$stateProvider
 			.state('home', {
@@ -12,12 +12,13 @@
 				controller: 'HomeCtrl as home',
 				templateUrl: '/templates/home.html'
 			});
-
-
 	}
 
 
+
+
 	angular
-		.module('blocChat', ['ui.router', 'firebase'])
+		.module("blocChat", ["firebase", "ui.router"])
 		.config(config);
+
 })();
