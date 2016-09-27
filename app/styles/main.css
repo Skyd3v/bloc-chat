@@ -42,4 +42,13 @@ body {
 	font-size: 80%;
 	color: black;
 	text-transform: uppercase;
-} 
+}
+
+section {
+	position: fixed;
+	z-index: 1;
+	width: 80%;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
