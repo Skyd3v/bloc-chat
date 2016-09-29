@@ -28,7 +28,7 @@
 					if (!currentUser || currentUser ===''){
 						$uibModal.open({
 							templateUrl: '/templates/usermodal.html',
-							controller: 'UserModalCtrl.js',
+							controller: 'UserModalCtrl',
 							size: 'sm',
 							backdrop: 'static'
 						});
