@@ -13,7 +13,7 @@ body {
 
 .navbar {
     position: fixed;
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0.10);
     z-index: 1;
     width: 20%;
     height: 100%;
@@ -40,11 +40,16 @@ hr.style-one {
 	font-size: 1.7em;
 }
 
-/*.nav h1, .nav .new-room-button {
-	width: 100%;
-	padding: 1% 10%;
-	font-size: 1.9rem;
-}*/
+.room-links .room-name {
+	margin: 10% 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.room-links .room-name:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
 
 section {
 	position: fixed;
@@ -55,7 +60,22 @@ section {
 	height: 100%;
 }
 
-section .modal-container {
-	z-index: 2;
-	border: 2px solid red;
+.message-container h2 {
+	padding-left: 20px;
+}
+
+.message-container p{
+	margin: 0;
+}
+
+.message-body {
+	padding: 5px 10px;
+}
+
+.message-body:nth-child(even){
+	background: #CCC;
+}
+
+.message-body:nth-child(odd){
+	background: #FFF;
 }

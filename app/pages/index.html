@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html  ng-app="blocChat">
 <head lang="en">
@@ -12,22 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<div ng-controller="HomeCtrl">
 	<nav class="navbar">
 		<div class="container-fluid"> <!-- vertical nav bar -->
-			<ul class="nav nav-pills nav-stacked" ui-sref="home">
+			<ul class="nav nav-pills nav-stacked">
 				<li>
 					<h1>Bloc Chat</h1>
 				</li>
 				<li class="new-room-button" ng-controller="ModalCtrl">
-					<button type="button" class="btn btn-default" ng-click="open()">Create Room</button>
+					<button type="button" class="btn btn-primary" ng-click="open()">Create Room</button>
 				</li><hr class="style-one">
-				<div ui-view></div>
+				<room-list></room-list>
 			</ul>
 		</div>
 	</nav>
-	<section>
 
+	<section>
+		<chat-room></chat-room>
 	</section>
+	</div>
 
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
   <script>
@@ -70,5 +72,7 @@
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
+    <script src="/scripts/directives/chatRoom.js"></script>
+    <script src="/scripts/directives/roomList.js"></script>
 </body>
 </html>
